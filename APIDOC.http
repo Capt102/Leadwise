@@ -2,3 +2,61 @@
 ####
 GET http://127.0.0.1:8000/api/leads/
 Accept: application/json
+Authorization: Token ff5a4a8766342e6aa2227493a280eda15468dcda
+
+###
+post http://127.0.0.1:8000/api/leads/
+Content-Type: application/json
+
+{
+    "name":"nutrie",
+    "email":"nutrie@gamil.com",
+    "phone":"528758363",
+    "company":"nutrie",
+    "source":"linkedin",
+    "budget":30000,
+    "requirement":"portfolio development"
+
+}
+
+###
+GET http://127.0.0.1:8000/api/leads/1/
+Accept: application/json
+
+
+###
+put http://127.0.0.1:8000/api/leads/1/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "xyz",
+  "email": "xyz@gamil.com",
+  "phone": "527828363",
+  "company": "xyz",
+  "source": "ads",
+  "status": "new",
+  "budget": "200000.00",
+  "requirement": "web development",
+  "next_follow_up_date": null,
+  "last_contacted_date": "2026-04-21",
+  "notes": null,
+  "created_at": "2026-04-21T03:58:37.716120Z",
+  "updated_at": "2026-04-21T03:58:37.716137Z"
+}
+
+
+###
+delete http://127.0.0.1:8000/api/leads/1/
+
+
+###
+post http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "password":"admin"
+}
+
+
